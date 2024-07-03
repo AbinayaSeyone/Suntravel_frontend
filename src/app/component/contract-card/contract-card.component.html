@@ -1,0 +1,131 @@
+<!-- contract-card.component.html -->
+
+<!-- contract-card.component.html -->
+
+<!-- <div class="card">
+    <img src="../../../assets/contractimg.gif" class="card-img-round" alt="Contract Image">
+    <div class="card-body">
+        <h5 class="card-title">Contract {{ contract.contractId }}</h5>
+        <p class="card-text">Start Date: {{ contract.startDate | date }}</p>
+        <p class="card-text">End Date: {{ contract.endDate | date }}</p>
+        <p class="card-text">Hotel: {{ contract.hotel.hotelName }}</p>
+     
+        <a href="#" class="btn btn-primary">View Details</a>
+    </div>
+</div> -->
+
+
+<!-- contract-card.component.html -->
+
+<!-- <div class="card">
+    <img src="../../../assets/contractimg.gif" class="card-img-round" alt="Contract Image">
+    <div class="card-body">
+      <h5 class="card-title">Contract {{ contract.contractId }}</h5>
+      <p class="card-text">Start Date: {{ contract.startDate | date }}</p>
+      <p class="card-text">End Date: {{ contract.endDate | date }}</p>
+      <p class="card-text">Hotel: {{ contract.hotel.hotelName }}</p>
+       Button to toggle visibility -->
+      <!-- <button class="btn btn-primary" (click)="toggleDetails()">View Details</button>
+      
+      Table with ngIf to conditionally show 
+      <table class="table" *ngIf="showDetails">
+        <thead>
+          <tr>
+            <th>Room Type</th>
+            <th>Price</th>
+            <th>maxAdults</th>
+            <th>noOfRooms</th>
+
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contractedRoomType of contract.contractedRoomTypeList">
+            <td>{{ contractedRoomType.roomType.roomTypeName }}</td>
+            <td>{{ contractedRoomType.price }}</td>
+            <td>{{ contractedRoomType.maxAdults}}</td>
+            <td>{{ contractedRoomType.noOfRooms }}</td>
+             Add more table cells as needed 
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> --> 
+
+  <!-- <div class="card">
+    <img [src]="getRandomImage()" class="card-img-round" alt="Contract Image">
+    <div class="card-body">
+      <h5 class="card-title">Contract {{ contract.contractId }}</h5>
+      <p class="card-text">Start Date: {{ contract.startDate | date }}</p>
+      <p class="card-text">End Date: {{ contract.endDate | date }}</p>
+      <p class="card-text">Hotel: {{ contract.hotel.hotelName }}</p>
+    
+      <button class="btn btn-primary" (click)="toggleDetails()">View Details</button>
+      
+      
+      <table class="table" *ngIf="showDetails">
+        <thead>
+          <tr>
+            <th>Room Type</th>
+            <th>Price</th>
+            <th>maxAdults</th>
+            <th>noOfRooms</th>
+        
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contractedRoomType of contract.contractedRoomTypeList">
+            <td>{{ contractedRoomType.roomType.roomTypeName }}</td>
+            <td>{{ contractedRoomType.price }}</td>
+            <td>{{ contractedRoomType.maxAdults}}</td>
+            <td>{{ contractedRoomType.noOfRooms }}</td>
+         
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div> -->
+
+<div class="card">
+  <div class="card-body">
+    <div class="card-image">
+      <img src="../../../assets/contractimg.gif" class="card-img-round" alt="Contract Image">
+    </div>
+    <div class="card-content">
+      <h5 class="card-title">Contract {{ contract.contractId }}</h5>
+      <p class="card-text">Start Date: {{ contract.startDate | date }}</p>
+      <p class="card-text">End Date: {{ contract.endDate | date }}</p>
+      <p class="card-text">Hotel: {{ contract.hotel.hotelName }}</p>
+      <!-- Add more details as needed -->
+
+      <!-- Button to toggle visibility -->
+      <button class="btn btn-sm btn-primary" (click)="toggleDetails()">View</button>
+
+    </div>
+    
+  </div>
+
+  <!-- Table with ngIf to conditionally show -->
+  <table class="table" *ngIf="showDetails">
+    <!-- Table content here -->
+    <thead>
+      <tr>
+        <th>Room Type</th>
+        <th>Price</th>
+        <th>maxAdults</th>
+        <th>noOfRooms</th>
+        <!-- Add more table headers as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contractedRoomType of contract.contractedRoomTypeList">
+        <td>{{ contractedRoomType.roomType.roomTypeName }}</td>
+        <td>{{ contractedRoomType.price }}</td>
+        <td>{{ contractedRoomType.maxAdults}}</td>
+        <td>{{ contractedRoomType.noOfRooms }}</td>
+        <!-- Add more table cells as needed -->
+      </tr>
+    </tbody>
+
+  </table>
+</div>

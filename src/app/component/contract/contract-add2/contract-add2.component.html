@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+<div class="container mt-4">
+  <h2>Add New Contract</h2>
+
+  <form [formGroup]="contractForm" (ngSubmit)="addContract()">
+    <div class="form-group">
+      <label for="startDate">Start Date:</label>
+      <input type="date" formControlName="startDate" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="endDate">End Date:</label>
+      <input type="date" formControlName="endDate" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="markUpRate">Markup Rate:</label>
+      <input type="number" formControlName="markUpRate" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="hotel">Select Hotel:</label>
+      <select formControlName="hotel" class="form-control" required>
+        <option *ngFor="let hotel of availableHotels" [value]="hotel.hotelId">{{ hotel.hotelName }}</option>
+      </select>
+    </div>
+
+    <!-- Contracted Room Type Details -->
+    <div formArrayName="contractedRoomTypeList">
+      <div *ngFor="let roomTypeGroup of contractedRoomTypeGroups?.controls; let i = index">
+        <div [formGroupName]="i">
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" formControlName="price" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="maxAdults">Max Adults:</label>
+            <input type="number" formControlName="maxAdults" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="noOfRooms">No of Rooms:</label>
+            <input type="number" formControlName="noOfRooms" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="roomType">Select Room Type:</label>
+            <select formControlName="roomType" class="form-control">
+              <option *ngFor="let type of availableRoomTypes" [value]="type?.roomTypeId">{{ type?.roomTypeName }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="addRoomType()">Add Room Type</button>
+
+    <button type="submit" class="btn btn-primary">Add Contract</button>
+  </form>
+</div>

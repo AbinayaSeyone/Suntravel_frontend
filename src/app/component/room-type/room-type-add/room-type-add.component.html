@@ -1,0 +1,38 @@
+<!-- <div class="reservation-container">
+    <h2>Add New Room Type</h2>
+   <img src="../../../../assets/addRoomType.gif" [width]="120" [height]="120"> 
+  
+    <form (ngSubmit)="addRoomType()">
+      <label for="roomTypeName">Room Type Name:</label>
+      <input type="text" id="roomTypeName" name="roomTypeName" class="form-control" [(ngModel)]="newRoomType.roomTypeName" required>
+  
+      <label for="hotel">Select Hotel:</label>
+      <select id="hotel" name="hotel" class="form-control" [(ngModel)]="newRoomType.hotel" required>
+        <option *ngFor="let hotel of availableHotels" [ngValue]="hotel">{{ hotel.hotelName}}</option>
+      </select>
+  
+      <button type="submit" class="btn btn-primary">Add Room Type</button>
+    </form>
+  </div>
+   -->
+
+   <div class="reservation-container">
+    <h2>Add New Room Type</h2>
+  
+    <form (ngSubmit)="addRoomType()">
+      <div class="form-group">
+        <label for="roomTypeName">Room Type Name:</label>
+        <input type="text" id="roomTypeName" name="roomTypeName" class="form-control" [(ngModel)]="newRoomType.roomTypeName" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="hotel">Select Hotel:</label>
+        <select id="hotel" name="hotel" class="form-control" [(ngModel)]="newRoomType.hotel" required>
+          <option *ngFor="let hotel of availableHotels" [ngValue]="hotel">{{ hotel.hotelName}}</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Add Room Type</button>
+    </form>
+  </div>
+

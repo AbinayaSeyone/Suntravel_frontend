@@ -1,0 +1,38 @@
+
+<app-navbar></app-navbar>
+
+<!-- <div class="container mt-6">
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-3" *ngFor="let hotel of hotels">
+      <app-hotel-card [hotel]="hotel"></app-hotel-card>
+    </div>
+  </div>
+
+ Add button at the top-left corner 
+  <div class="fixed-top-left">
+    <a routerLink="/hotelAdd" class="btn btn-primary">Add Hotel</a>
+  </div>
+</div> -->
+
+<div class="container mt-6" id="hotel-container">
+
+
+  <div class="row mt-6"></div>
+  <div class="row mt-6">
+    <div class="col-sm-6 col-md-6 col-lg-3" *ngFor="let hotel of hotels">
+      <app-hotel-card [hotel]="hotel"></app-hotel-card>
+    </div>
+  </div>
+
+  <!-- Add button at the top-left corner -->
+  <div class="fixed-top-left">
+    <a routerLink="/hotelAdd" class="btn btn-primary">Add Hotel</a>
+  </div>
+</div>
+
+
+
+<!-- hotel.component.html -->
+
+
+<!-- <app-hotel-add (addHotelEvent)="addHotel($event)"></app-hotel-add> -->

@@ -1,0 +1,90 @@
+/* .container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .condition {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    margin-right: 10px;
+  }
+   */
+
+   /* Custom CSS for styling the search form */
+/* Custom CSS for styling the search form */
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 10px;
+  box-shadow:0 8px 16px #0e2947; 
+}
+
+/* Heading */
+h2 {
+  color: #0e2947;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.form-label {
+  font-weight: bold;
+  color: #6c757d;
+}
+
+/* Input Fields */
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Add Condition Button */
+.btn-primary, .btn-success {
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover, .btn-success:hover {
+  background-color: #0e2947;
+}
+
+/* Condition Section */
+.condition {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.condition h3 {
+  color: #0e2947;
+  margin-bottom: 15px;
+}
+
+/* Search Button */
+.btn-success {
+  margin-right: 10px;
+}

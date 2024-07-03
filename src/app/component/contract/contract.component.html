@@ -1,0 +1,17 @@
+<!-- contract.component.html -->
+<app-navbar></app-navbar>
+<div class="row"></div>
+<div class="container mt-5"  style="margin-bottom: 20px">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-4" *ngFor="let contract of contracts" style="margin-bottom: 20px;">
+          <app-contract-card [contract]="contract"></app-contract-card>
+        </div>
+      </div>
+
+    <div class="fixed-top-left">
+        <a routerLink="/contractAdd" class="btn btn-primary">Add Contract</a>
+    </div>
+</div>
+
+
+  

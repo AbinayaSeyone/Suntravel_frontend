@@ -1,0 +1,16 @@
+<div class="reservation-container">
+  <h2>Add New Hotel</h2>
+ <img src="../../../../assets/addHotel.gif"[width]="120"[height]="120">
+
+  <form (ngSubmit)="addHotel()">
+    <label for="hotelName">Hotel Name:</label>
+    <input type="text" id="hotelName" name="hotelName" class="form-control" [(ngModel)]="newHotel.hotelName" required>
+    <div *ngIf="!newHotel.hotelName.trim()" class="text-danger">Hotel name is required</div>
+   
+    <label for="hotelLocation">Hotel Location:</label>
+    <input type="text" id="hotelLocation" name="hotelLocation" class="form-control" [(ngModel)]="newHotel.hotelLocation" required>
+
+   
+    <button type="submit" class="btn btn-primary">Add Hotel</button>
+  </form>
+</div>

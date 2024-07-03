@@ -1,0 +1,53 @@
+.reservation-container {
+    max-width: 600px; /* Increased width */
+    margin: 50px auto; /* Center the form vertically and horizontally */
+    padding: 30px;
+    background-color: #0a2a4b09;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px #0a2a4b;
+  }
+  
+  .reservation-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  .btn-primary {
+    background-color: #0a2a4b!important;
+    color: #fff;
+  }
+  

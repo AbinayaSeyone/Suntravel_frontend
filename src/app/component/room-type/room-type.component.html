@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<!-- <div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let roomType of roomTypes">
+            <app-room-type-card [roomType]="roomType"></app-room-type-card>
+        </div>
+    </div>
+
+    <div class="fixed-top-left">
+        <a routerLink="/roomTypeAdd" class="btn btn-primary">Add RoomType</a>
+    </div>
+</div> -->
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let roomType of roomTypes">
+            <div class="card room-type-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ roomType.roomTypeName }}</h5>
+                    <p class="card-text">{{ roomType.hotel.hotelName }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-top-left">
+        <a routerLink="/roomTypeAdd" class="btn btn-primary">Add RoomType</a>
+    </div>
+</div>

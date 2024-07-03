@@ -1,0 +1,70 @@
+
+<app-navbar></app-navbar>
+<!-- <div class="row"></div>
+<div class="container">
+
+    <div *ngFor="let contract of contracts" class="card mb-3">
+        <div class="card-body">
+            <img [src]="contract.hotel.imageUrl" class="card-img-top" alt="Hotel Image">
+            <h5 class="card-title">{{ contract.hotel.hotelName }}</h5>
+            <p class="card-text">{{ contract.hotel.hotelLocation }}</p>
+            <button class="btn btn-primary" (click)="toggleDetails()">View Details</button>
+      
+    
+      <table class="table" *ngIf="showDetails">
+        <thead>
+          <tr>
+            <th>Room Type</th>
+            <th>Price</th>
+            <th>maxAdults</th>
+            <th>noOfRooms</th>
+
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contractedRoomType of contract.contractedRoomTypeList">
+            <td>{{ contractedRoomType.roomType.roomTypeName }}</td>
+            <td>{{ contractedRoomType.price }}</td>
+            <td>{{ contractedRoomType.maxAdults}}</td>
+            <td>{{ contractedRoomType.noOfRooms }}</td>
+           
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> -->
+  
+            <!-- <h2>Contracted Room Types</h2>
+            <div *ngFor="let contractedRoomType of contract.contractedRoomTypeList" class="card mb-3">
+                <div class="card-body">
+                    <p>Max Adults: {{ contractedRoomType.maxAdults }}</p>
+                    <p>Price: {{ contractedRoomType.price }}</p>
+                    <p>No of Rooms: {{ contractedRoomType.noOfRooms }}</p>
+                    <p>Room Type Name: {{ contractedRoomType.roomType.roomTypeName }}</p>
+                </div>
+            </div>
+            <button class="btn btn-primary" [routerLink]="['/availableContractDetails', contract.contractId]">View
+                Details</button>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- available-contract-details.component.html-->
+
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div *ngFor="let contract of contracts">
+                <app-available-hotels-card [contract]="contract" [conditions]="conditions" [noOfNights]="noOfNights"></app-available-hotels-card>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+  <h3> Maximum Total Price of All Contracts : {{showPriceMax()}}</h3>
+</div>
+
